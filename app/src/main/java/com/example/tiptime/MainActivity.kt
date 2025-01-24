@@ -89,6 +89,8 @@ fun TipTimeLayout() {
 fun EditNumberField(modifier: Modifier = Modifier) {
     var amountInput = remember { mutableStateOf("0")}
     TextField(
+        label = { Text(stringResource(R.string.bill_amount))},
+        singleLine = true,
         value = amountInput.value,
         onValueChange = { amountInput.value = it},
         modifier = modifier
